@@ -1,0 +1,19 @@
+{
+    "name": "Aws_IOT_Core",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index",
+        "dev": "nodemon index"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "aws-iot-device-sdk": "^2.2.11",
+        "aws-sdk": "^2.1088.0",
+        "ffmpeg": "0.0.4",
+        "nodemon": "^2.0.15"
+    }
+}
