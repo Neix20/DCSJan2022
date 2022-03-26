@@ -22,15 +22,19 @@ function base64_encode(file) {
     return fs.readFileSync(file, { encoding: "base64" });
 }
 
+let fileDir = "img";
+let fileName = "non_red.jpg";
+
 // We connect our client to AWS  IoT core. 
 device.on('connect', function() {
-    let fire_img = base64_encode("img\\non_fire.jpg");
+    let fire_img = base64_encode(`${fileDir}\\${fileName}`);
+
 
     // console.log(fire_img)
     console.log('STEP - Connecting to AWS  IoT Core');
     console.log(`---------------------------------------------------------------------------------`)
     device.subscribe('smartCity/fire-detector-camera-01');
-    device.publish('smartCity/fire-detector-camera-01', JSON.stringify({ data: fire_img }));
+    device.publish('smartCity/fire-detector-camera-01', JSON.stringify({ data: fire_img, imgName: `frame_${fileName}` }));
 });
 
 
