@@ -1,8 +1,8 @@
 const AWS = require('aws-sdk');
 
 const sns = new AWS.SNS({
-    accessKeyId: "AKIAWZTPQET3RVK7AJ4I",
-    secretAccessKey: "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",
+    accessKeyId: "",
+    secretAccessKey: "",
     region: 'us-west-2'
 });
 

@@ -1,8 +1,8 @@
 const AWS = require('aws-sdk');
 const fs = require('fs');
 const BUCKET_NAME = "fireimages3";
-const IAM_USER_KEY = "AKIAWZTPQET35ESG3FZG";
-const IAM_USER_SECRET = "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";
+const IAM_USER_KEY = "";
+const IAM_USER_SECRET = "";
 
 const s3bucket = new AWS.S3({
     accessKeyId: IAM_USER_KEY,
